@@ -15,7 +15,9 @@ namespace informator.Controllers
             //ViewBag.Beskrivning = "Ett smaskigt recept";
             var Model = new ReceptInformationModels()
             {
-                Namn = "Nåt gött"
+                Namn = "Nåt gött",
+                Beskrivning = "Det här ska var en längre text"
+
             };
             return View(Model);
         }

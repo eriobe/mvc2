@@ -8,5 +8,6 @@ namespace informator.Models
     public class ReceptInformationModels
     {
         public string Namn { get; set; }
+        public string Beskrivning { get; set; }
     }
 }
