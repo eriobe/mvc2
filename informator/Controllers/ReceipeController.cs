@@ -1,4 +1,5 @@
-﻿using System;
+﻿using informator.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,8 +12,12 @@ namespace informator.Controllers
         // GET: Receipe
         public ActionResult FullDetails()
         {
-            ViewBag.Beskrivning = "Ett smaskigt recept";
-            return View();
+            //ViewBag.Beskrivning = "Ett smaskigt recept";
+            var Model = new ReceptInformationModels()
+            {
+                Namn = "Nåt gött"
+            };
+            return View(Model);
         }
     }
 }
