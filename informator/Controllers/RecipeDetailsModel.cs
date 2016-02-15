@@ -14,5 +14,3 @@ namespace informator.Controllers
         public string instructions { get; set; }
     }
 }
-}
-}

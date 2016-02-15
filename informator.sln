@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Recipe", "informator\Recipe.csproj", "{A8A99A5D-18FD-47B5-BE41-B844DD26D6CB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "informator", "informator\informator.csproj", "{A8A99A5D-18FD-47B5-BE41-B844DD26D6CB}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RecipeTests", "RecipeTests\RecipeTests.csproj", "{08E0C1CF-72B5-41AE-948E-3E30CDFDEF06}"
 EndProject
