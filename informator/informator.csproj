@@ -201,6 +201,7 @@
     <Compile Include="Controllers\ReceipeController.cs" />
     <Compile Include="Controllers\RecipeDetailsModel.cs" />
     <Compile Include="Controllers\TestController.cs" />
+    <Compile Include="DB\ReceptDB.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
