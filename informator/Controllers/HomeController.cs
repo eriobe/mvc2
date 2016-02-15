@@ -20,6 +20,12 @@ namespace informator.Controllers
             return View();
         }
 
+        public ViewResult SiteStatistics()
+        {
+            ViewBag.NumberOfRecipes = 1;
+            return View();
+        }
+
         public ActionResult Contact()
         {
             ViewBag.Message = "Your contact page.";
