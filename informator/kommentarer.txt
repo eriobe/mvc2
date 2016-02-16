@@ -109,6 +109,11 @@ Då kan man slägga till structuremap.mvc5
 
 solidprinciper. Kolla upp boken clean code 
 
+***
+Vyer
+om man vill ha en egen layout på en sida. 
+lägg in en _ViewStart.cshtml i önskad mapp och ändra sökvägen.
+
 
 
 
