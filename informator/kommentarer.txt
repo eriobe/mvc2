@@ -129,6 +129,9 @@ IsNegative(-5);
 Formulär
 stoppa in det i ett using-element. Detta för att den då automatiskt stängs.
 
+för att ta emot data
+lägg till attributet [HttpPost]
+
 
 
 
