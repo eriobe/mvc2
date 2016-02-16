@@ -4,10 +4,12 @@
 }
 
 <h2>Index</h2>
-@foreach (var recept in Model)
+@*@foreach (var recept in Model)
 {
     <h3>
        @recept.Name
     </h3>
     <p>@recept.Summary</p>
-}
+}*@
+
+@Html.Partial("_ReviewList",Model)
