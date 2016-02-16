@@ -114,6 +114,16 @@ Vyer
 om man vill ha en egen layout på en sida. 
 lägg in en _ViewStart.cshtml i önskad mapp och ändra sökvägen.
 
+http://visualstudioshortcuts.com/2015/
+
+
+***
+undersök func och action!!!
+
+Func<int,bool> IsNegative = x => x<0;
+
+IsNegative(-5);
+
 
 
 
