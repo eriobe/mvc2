@@ -1,4 +1,5 @@
-﻿using informator.DB;
+﻿using informator.Data;
+using informator.DB;
 using informator.Models;
 using System;
 using System.Collections.Generic;
@@ -20,13 +21,14 @@ namespace informator.Controllers
             //    Beskrivning = "Det här ska var en längre text"
 
             //};
-            var DB = new ReceptDB();
-            var Model = DB.GetRecepieDetails(ID);
-            if(Model.Equals(null))
-            {
-                return null;
-            }
-            return View(Model);
+
+
+            var ro = new RecipeOperations();
+            var recipe = ro.GetRecipe(ID);
+            if (recipe != null)
+                return View(recipe);
+            else
+                return HttpNotFound();
         }
     }
 }

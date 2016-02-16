@@ -222,6 +222,7 @@
     <Compile Include="Controllers\ReceipeController.cs" />
     <Compile Include="Controllers\RecipeDetailsModel.cs" />
     <Compile Include="Controllers\TestController.cs" />
+    <Compile Include="Data\RecipeOperations.cs" />
     <Compile Include="DB\IReceptDB.cs" />
     <Compile Include="DB\ReceptDB.cs" />
     <Compile Include="DependencyResolution\ControllerConvention.cs" />

@@ -11,6 +11,6 @@ namespace informator.Controllers
         public string Summary { get; set; }
         public int CookingTimeInMinutes { get; set; }
         public string Ingredients { get; set; }
-        public string instructions { get; set; }
+        public string Instructions { get; set; }
     }
 }
