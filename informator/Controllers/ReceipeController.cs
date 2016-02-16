@@ -22,6 +22,10 @@ namespace informator.Controllers
             //};
             var DB = new ReceptDB();
             var Model = DB.GetRecepieDetails(ID);
+            if(Model.Equals(null))
+            {
+                return null;
+            }
             return View(Model);
         }
     }
