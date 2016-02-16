@@ -6,7 +6,7 @@ using System.Web;
 
 namespace informator.DB
 {
-    public class ReceptDB
+    public class ReceptDB : IReceptDB
     {
         private static List<RecipeDetailsModel> Recept = new List<RecipeDetailsModel> {
         new RecipeDetailsModel {

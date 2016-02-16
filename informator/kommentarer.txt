@@ -1,0 +1,87 @@
+﻿http://www.telerik.com/fiddler
+
+Fiddler gör att man kan bevaka trafiken mellan webbläsaren och servern. En proxy
+
+Finns som en bok, ett Måste för alla webbutvecklare. GET/book
+
+____________***
+tore@edument.se
+
+Ok att maila om man har frågor.
+
+
+*******
+Kul grej 
+nuget för datorer -> chocolatey
+https://chocolatey.org/
+
+Detta kan skriptas. Dvs programmen installeras
+
+choko install notepadpluplus -y
+ckoho install ....
+
+******
+Obs.
+cheka inte in packagesmappen när ni checkar in kod! Den återskapas ändå automatiskt.
+
+***
+
+manage nuget packages.
+
+****
+I mvc finns inte kopplingen 1:1 mellan url och filnamn
+
+***
+1. alla controllers i mvc måste heta något som slutar med Controller.
+2. vi har en vy-folder per controller
+3. Oftast en vy per actionmetod
+4. vyn heter oftast samma sak som actionmetoden
+5. dessa är publika
+
+
+
+*****
+
+Zoomit v4.5 från Microsoft. Jättebra för att zooma in under presentation
+
+
+**
+dynamiska data
+1. ViewBag, inte jättesmart eftersom man inte får hjälp av intellisensen.
+2. Använd modell (add class i mappen models
+
+
+**
+TDD
+
+1. skriv testet först- det driver utvecklingen framåt.
+testa med ramverket NUnit
+
+alla tester ska ligga i ett separat projekt. Aldrig i samma
+add new project
+class bibliotek
+
+vanligt metodnamn = sut
+betyder system under test
+
+Om man använder testramverket NUnit måste detta inkluderas i Test Explorer - > ladda ner tools> extensions and update
+sök efter testadapter nunit (online)
+
+Nunit3
+
+för att testa och leka
+string tdd kata - standard beskrivning, övning
+
+***
+installera Resharper som ger bonusfinesser i vs
+
+***
+Ncrunch om man vill att koden ska testas momentant.
+***
+regexper... bra för att visa reguljära uttryck
+
+
+***
+testa interface, inte implementationer
+
+skapa ett interface - högerklicka klassnamnet - > extract interface
