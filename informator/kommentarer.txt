@@ -85,3 +85,30 @@ regexper... bra för att visa reguljära uttryck
 testa interface, inte implementationer
 
 skapa ett interface - högerklicka klassnamnet - > extract interface
+
+Tricket ligger i att när man skapar interface kan dessa hålla alla hårda beroenden till andra objekt.
+
+Låt konstruktorn ropa på interfacet. Se det som en klubb som kräver ett speciellt attribut, tex likadana skor
+***
+
+för att slippa skapa testklasser för allt kan man använda ett mockningsramverk
+
+nuget . > nsubstitute
+
+lägg in den i testklasserna
+
+då kan man skriva Substitute.For<interfacesomskatestas>();
+
+detta kan programmeras så att den skickar ut fasta värden
+faketax.GetTax(2000).Returns(1000);
+
+***
+Om man har skapat ett interface som kräver en indataparameter vid start
+
+Då kan man slägga till structuremap.mvc5
+
+solidprinciper. Kolla upp boken clean code 
+
+
+
+
