@@ -1,4 +1,5 @@
 ﻿using informator.Controllers;
+using informator.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -6,7 +7,7 @@ using System.Web;
 
 namespace informator.Data
 {
-    public class RecipeOperations
+    public class RecipeOperations : IRecipeOperations
     {
         private static List<RecipeDetailsModel> Recipes = new List<RecipeDetailsModel>
         {
@@ -31,6 +32,27 @@ namespace informator.Data
         public RecipeDetailsModel GetRecipe(int id)
         {
             return id < Recipes.Count ? Recipes[id] : null;
+        }
+        /// <summary>
+        /// metod som hämtar delar av informationen och returnerar som en lista
+        /// </summary>
+        /// <returns></returns>
+        public List<RecipeSummaryModel> GetAllRecipes()
+        {
+            //tempobjekt
+            var result = new List<RecipeSummaryModel>();
+
+            foreach (var recept in Recipes)
+            {
+                result.Add(new RecipeSummaryModel
+                {
+                    
+                    Name=recept.Name,
+                    Summary = recept.Summary
+
+                });
+            }
+            return result;
         }
     }
 }

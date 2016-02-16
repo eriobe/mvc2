@@ -11,6 +11,12 @@ namespace informator.Controllers
 {
     public class ReceipeController : Controller
     {
+        private IRecipeOperations ro;
+
+        public ReceipeController(IRecipeOperations ro)
+        {
+            this.ro = ro;
+        }
         // GET: Receipe
         public ActionResult FullDetails(int ID)
         {
@@ -29,6 +35,12 @@ namespace informator.Controllers
                 return View(recipe);
             else
                 return HttpNotFound();
+        }
+        public ActionResult Index()
+        {
+            //throw new NotImplementedException();
+            return View(ro.GetAllRecipes());
+
         }
     }
 }

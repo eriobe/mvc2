@@ -222,6 +222,7 @@
     <Compile Include="Controllers\ReceipeController.cs" />
     <Compile Include="Controllers\RecipeDetailsModel.cs" />
     <Compile Include="Controllers\TestController.cs" />
+    <Compile Include="Data\IRecipeOperations.cs" />
     <Compile Include="Data\RecipeOperations.cs" />
     <Compile Include="DB\IReceptDB.cs" />
     <Compile Include="DB\ReceptDB.cs" />
@@ -237,6 +238,7 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\ReceptInformationModels.cs" />
+    <Compile Include="Models\RecipeSummaryModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -303,6 +305,8 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Test\Hello.cshtml" />
     <Content Include="Views\Receipe\FullDetails.cshtml" />
+    <Content Include="Views\Receipe\Index.cshtml" />
+    <Content Include="Views\Receipe\_ReviewList.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
