@@ -132,6 +132,19 @@ stoppa in det i ett using-element. Detta för att den då automatiskt stängs.
 för att ta emot data
 lägg till attributet [HttpPost]
 
+**********
+för att hämta forumlärdata, använd modelbinding
+
+risk!
+om man har en egenskap i classen som inte finns på formuläret kan man sätta denna själv i url!
+
+lösning
+lägg till attributet [Bind(Exclude = "isAdmin")]
+
+eller skapa en separat class (vymodell)
+
+heter MassAssignment vulnarbility
+
 
 
 

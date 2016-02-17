@@ -32,5 +32,10 @@ namespace informator.Controllers
 
             return View();
         }
+
+        public ActionResult RandomRecipe()
+        {
+            return PartialView();
+        }
     }
 }
