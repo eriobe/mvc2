@@ -159,6 +159,14 @@ dummydata... kollar redgate generator red-gate.com
 
 Undersök, select n+1 problem
 
+****
+Scaffolding
+Hjälper mig att generera controller för enkla operationer CRUD, create read update delete
+
+mvccontroller with entity framework.
+
+[x] reference script libraries
+
 
 
 

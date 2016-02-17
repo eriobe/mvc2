@@ -96,6 +96,8 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -213,7 +215,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\IdentityConfig.cs" />
-    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="App_Start\StructuremapMvc.cs" />
     <Compile Include="Controllers\AccountController.cs" />
@@ -222,8 +224,26 @@
     <Compile Include="Controllers\ReceipeController.cs" />
     <Compile Include="Controllers\RecipeDetailsModel.cs" />
     <Compile Include="Controllers\TestController.cs" />
+    <Compile Include="Data\datamodell.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>datamodell.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\datamodell.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>datamodell.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Data\datamodell.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>datamodell.edmx</DependentUpon>
+    </Compile>
     <Compile Include="Data\IRecipeOperations.cs" />
     <Compile Include="Data\RecipeOperations.cs" />
+    <Compile Include="Data\Recipes.cs">
+      <DependentUpon>datamodell.tt</DependentUpon>
+    </Compile>
     <Compile Include="DB\IReceptDB.cs" />
     <Compile Include="DB\ReceptDB.cs" />
     <Compile Include="DependencyResolution\ControllerConvention.cs" />
@@ -245,6 +265,16 @@
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Data\datamodell.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>datamodell.edmx</DependentUpon>
+      <LastGenOutput>datamodell.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Data\datamodell.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>datamodell.edmx</DependentUpon>
+      <LastGenOutput>datamodell.cs</LastGenOutput>
+    </Content>
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -256,6 +286,13 @@
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <EntityDeploy Include="Data\datamodell.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>datamodell.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Data\datamodell.edmx.diagram">
+      <DependentUpon>datamodell.edmx</DependentUpon>
     </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
@@ -319,6 +356,9 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
