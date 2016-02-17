@@ -52,10 +52,15 @@ namespace informator.Controllers
         [HttpPost]
         public ActionResult Submit(RecipeDetailsModel insert)
         {
-
-            
-            int id = ro.AddRecipe(insert);
-            return RedirectToAction("FullDetails", new { id = id });
+            if (ModelState.IsValid)
+            {
+                int id = ro.AddRecipe(insert);
+                return RedirectToAction("FullDetails", new { id = id });
+            }
+            else
+            {
+                return View("RecipeSubmit");
+            }
 
         }
 

@@ -7,9 +7,12 @@
 
 @using (Html.BeginForm())
 {
+    @Html.ValidationSummary(excludePropertyErrors: false)
     <p>
         namn<br />
         @Html.TextBoxFor(m => m.Name)
+        @Html.ValidationMessageFor(m => m.Name)
+
     </p>
     <p>
         Sammanfattning<br />
