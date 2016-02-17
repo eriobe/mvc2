@@ -22,6 +22,24 @@ namespace informator.Controllers
             if (Summary.Contains("@"))
                 yield return new ValidationResult("Description can't contain @ characters");
         }
+
+        public class NoDrunknessAttribute : ValidationAttribute
+        {
+            public override bool IsValid(object value)
+            {
+                if (value == null)
+                    return false;
+                var ToCheck = value.ToString().ToLower();
+                return !ToCheck.Contains("drunk") &&
+                !ToCheck.Contains("hammered") &&
+                !ToCheck.Contains("glad i hatten");
+            }
+            public override string FormatErrorMessage(string field)
+            {
+                return field + " should not talk about being drunk!";
+            }
+        }
+        
     }
     
 }

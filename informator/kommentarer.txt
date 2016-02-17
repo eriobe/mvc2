@@ -167,6 +167,18 @@ mvccontroller with entity framework.
 
 [x] reference script libraries
 
+******
+
+API
+
+surfa in på programmableweb. Communityn för alla api-nördar
+
+använd httpclient för att hämta api-anropen
+
+
+*******
+sqlmap scannar igenom sidan efter potentiella sql injectionproblem.
+
 
 
 
