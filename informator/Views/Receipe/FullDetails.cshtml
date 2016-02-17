@@ -7,6 +7,22 @@
 <h2>FullDetails</h2>
 <p>Några detaljer som summeras @Model.Name med en beskrivning @Model.Summary.ToLower()</p>
 
+Redigera
+@using (Html.BeginForm("Edit", "Receipe"))
+{
+    <p>
+        namn<br />
+        @Html.TextBoxFor(m => m.Name)
+        @Html.Hidden("ID",(object)ViewBag.ID)
+    </p>
+    <p>
+        Sammanfattning<br />
+        @Html.TextAreaFor(m => m.Summary)
+    </p>
+    <input type="submit" value="Spara" />
+}
+
+
 
 
 

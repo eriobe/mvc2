@@ -54,5 +54,16 @@ namespace informator.Data
             }
             return result;
         }
+
+        public int AddRecipe(RecipeDetailsModel receptModell)
+        {
+            Recipes.Add(receptModell);
+            return Recipes.Count-1;
+        }
+
+        public void EditRecipe(int id, RecipeDetailsModel receptModell)
+        {
+            Recipes[id].Name = receptModell.Name;
+        }
     }
 }

@@ -27,6 +27,7 @@ namespace informator.Controllers
             //    Beskrivning = "Det här ska var en längre text"
 
             //};
+            ViewBag.ID = ID;
 
 
             var ro = new RecipeOperations();
@@ -42,5 +43,34 @@ namespace informator.Controllers
             return View(ro.GetAllRecipes());
 
         }
+        public ActionResult Submit()
+        {
+            
+            return View("RecipeSubmit");
+
+        }
+        [HttpPost]
+        public ActionResult Submit(RecipeDetailsModel insert)
+        {
+
+            
+            int id = ro.AddRecipe(insert);
+            return RedirectToAction("FullDetails", new { id = id });
+
+        }
+
+        [HttpPost]
+        public ActionResult Edit(int id, RecipeDetailsModel edit)
+        {
+
+
+            ro.EditRecipe(id,edit);
+            return RedirectToAction("FullDetails", new { id = id });
+
+        }
+
+
+
+
     }
 }

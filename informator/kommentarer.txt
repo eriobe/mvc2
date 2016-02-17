@@ -145,6 +145,20 @@ eller skapa en separat class (vymodell)
 
 heter MassAssignment vulnarbility
 
+****
+databaser
+kolla in nosql neo4j
+
+neo 4j cypher
+
+en annan variant
+ravendb
+en schemalös databas, har ingen färdig hårdkodad struktur
+
+dummydata... kollar redgate generator red-gate.com
+
+Undersök, select n+1 problem
+
 
 
 

@@ -1,0 +1,33 @@
+﻿@model informator.Controllers.RecipeDetailsModel
+@{
+    ViewBag.Title = "RecipeSubmit";
+}
+
+<h2>ge mig ett recept</h2>
+
+@using (Html.BeginForm())
+{
+    <p>
+        namn<br />
+        @Html.TextBoxFor(m => m.Name)
+    </p>
+    <p>
+        Sammanfattning<br />
+        @Html.TextAreaFor(m => m.Summary)
+    </p>
+    <p>
+        Koktid:<br />
+        @Html.TextBoxFor(m => m.CookingTimeInMinutes) minuter
+    </p>
+    <p>
+        Ingredients:<br />
+        @Html.TextAreaFor(m => m.Ingredients)
+    </p>
+    <p>
+        Instructions:<br />
+        @Html.TextAreaFor(m => m.Instructions)
+    </p>
+
+    <input type="submit" value="Spara" />
+}
+
